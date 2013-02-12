@@ -18,7 +18,7 @@ Release:        0
 Url:            http://chandlerproject.org/bin/view/Projects/MeTooCrypto
 Summary:        Crypto and SSL toolkit for Python
 License:        MIT and ZPL-2.0 and BSD-3-Clause
-Group:          Development/Languages/Python
+Group:          Platfrom Development/Python
 Source:         M2Crypto-%{version}.tar.gz
 BuildRequires:  openssl
 BuildRequires:  openssl-devel
