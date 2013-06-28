@@ -20,6 +20,7 @@ Summary:        Crypto and SSL toolkit for Python
 License:        MIT and ZPL-2.0 and BSD-3-Clause
 Group:          Platfrom Development/Python
 Source:         M2Crypto-%{version}.tar.gz
+Source1001: 	python-M2Crypto.manifest
 BuildRequires:  openssl
 BuildRequires:  openssl-devel
 BuildRequires:  python-devel
@@ -47,6 +48,7 @@ original M2Crypto homepage is at http://sandbox.rulemaker.net/ngps/m2/.
 
 %prep
 %setup -n M2Crypto-%{version}
+cp %{SOURCE1001} .
 
 %build
 CFLAGS="%{optflags}" python setup.py build
@@ -55,6 +57,7 @@ CFLAGS="%{optflags}" python setup.py build
 python setup.py install --prefix=%{_prefix} --root=%{buildroot}
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license LICENCE 
 %{python_sitearch}/*
